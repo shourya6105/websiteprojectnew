@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELdiaries</title>
+    <style>
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: 'times new roman', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        
+        .navbar {
+            display: flex;
+            background-color: #0594f4; 
+            color: rgb(13, 13, 13);
+            padding: 10px 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a, .navbar button {
+            color: rgb(10, 10, 10);
+            padding: 10px 15px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+
+       
+        .hero-image {
+            height: 600px;
+            background: url('https://hips.hearstapps.com/hmg-prod/images/great-ocean-road-174028267-1494616481.jpg?crop=0.888888888888889xw:1xh;center,top&resize=2048:*')
+             no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(8, 8, 8);
+            font-size: 80px;
+        }
+
+        
+        .section {
+            padding: 40px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .modal-content input, .modal-content button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        .modal-content button {
+            background-color: #0196f9;
+            color: rgb(6, 0, 0);
+        }
+
+        .footer {
+            background-color: #0a95f8; 
+            color: rgb(8, 8, 8);rgb(10, 10, 10)
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>TRAVELdiaries</div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#Destinations">Locations</a>
+            <button onclick="showModal('loginModal')">Login</button>
+            <button onclick="showModal('signupModal')">Sign Up</button>
+        </div>z
+    </div>
+
+    <div id="home" class="hero-image">
+        <div>Discover Your Next locations </div>
+    </div>
+
+    <div id="about" class="section">
+        <h2>About</h2>
+        <p>We are passionate travel enthusiasts who love to explore new places. Join us to explore the world together!</p>
+    </div>
+
+    <div id="Destinations" class="section">
+        <h2>Featured Locations</h2>
+        <img src="IMG1.jpg" alt="100%">
+
+            <p>BALI</p>
+
+            <img src="IMG2.jpeg" alt="100%"> java
+
+            <p>MANALI</p>
+
+            <img src="IMG3.webp" alt="100%">
+
+            <p>CHICAGO</p>
+
+            <img src="IMG4.jpeg" alt="100%">
+
+            <p>PARIS</p>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact Us</h2>
+        <h5> Call--6606983228998</h5>
+       
+    </div>
+
+   
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="hideModal('loginModal')">Login</button>
+        </div>
+    </div>
+
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="hideModal('signupModal')">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>@2020-All Rights Reserved</p>
+    </div>
+
+    <script>
+       function showModal(modalId) {
+     document.getElementById(modalId).style.display = 'flex';
+ }
+function hideModal(modalId) {
+ document.getElementById(modalId).style.display = 'none';
+}
+    </script>
+</body>
+</html>
